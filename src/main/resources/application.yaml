@@ -1,37 +1,5 @@
 spring:
   application:
     name: eureka
-
-server:
-  port: 8761
-  shutdown: graceful
-  forward-headers-strategy: framework
-
-eureka:
-  instance:
-    metadata-map:
-      management.port: ${management.server.port}
-
-management:
-  server:
-    port: 8081
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-  info:
-    os:
-      enabled: true
-    java:
-      enabled: true
-    process:
-      enabled: true
-
-logging:
-  charset:
-    file: UTF-8
-  file:
-    path: ./logs
+  config:
+    import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
