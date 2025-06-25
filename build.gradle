@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'org.nowstart'
-version = '2.1.1'
+version = '2.2.0'
 
 springBoot {
     buildInfo()
@@ -33,6 +33,7 @@ ext {
 }
 
 dependencies {
+    implementation 'org.jolokia:jolokia-support-spring:2.2.9'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
     compileOnly 'org.projectlombok:lombok'
