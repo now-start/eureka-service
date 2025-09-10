@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'org.nowstart'
-version = '2.3.0'
+version = '2.3.1'
 
 springBoot {
     buildInfo()
