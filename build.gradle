@@ -3,11 +3,10 @@ plugins {
     id 'org.springframework.boot' version '3.5.0'
     id 'io.spring.dependency-management' version '1.1.7'
     id 'com.gorylenko.gradle-git-properties' version '2.5.0'
-    id 'org.cyclonedx.bom' version '2.3.1'
 }
 
 group = 'org.nowstart'
-version = '2.3.1'
+version = '2.4.0'
 
 springBoot {
     buildInfo()
@@ -34,9 +33,9 @@ ext {
 }
 
 dependencies {
-    implementation 'org.jolokia:jolokia-support-spring:2.2.9'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
